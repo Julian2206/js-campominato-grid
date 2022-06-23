@@ -34,3 +34,35 @@ function createNewBox() {
   box.classList.add("square");
   return box;
 }
+
+//----------------------------------------------------------
+
+const medium = document.getElementById("medium");
+
+medium.addEventListener("click", function () {
+  for (let i = 0; i < 80; i++) {
+    const newBox = createNewBox();
+
+    newBox.addEventListener("click", function () {
+      newBox.classList.toggle("color");
+      console.log(i + 1);
+    });
+    newBox.innerHTML = i + 1;
+    grid.append(newBox);
+  }
+});
+
+const hard = document.getElementById("hard");
+
+hard.addEventListener("click", function () {
+  for (let i = 0; i < 60; i++) {
+    const newBox = createNewBox();
+
+    newBox.addEventListener("click", function () {
+      newBox.classList.toggle("color");
+      console.log(i + 1);
+    });
+    newBox.innerHTML = i + 1;
+    grid.append(newBox);
+  }
+});
