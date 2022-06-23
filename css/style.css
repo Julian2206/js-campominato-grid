@@ -19,6 +19,10 @@ div#grid-container {
   height: 650px;
 }
 
+#button {
+  color: aliceblue;
+}
+
 div.square {
   float: left;
   width: calc(100% / 10);
@@ -28,7 +32,12 @@ div.square {
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 500;
+  color: azure;
+}
+
+div.square.color {
+  background-color: blueviolet;
 }
 
 div#grid-container div.square {

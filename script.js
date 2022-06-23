@@ -10,15 +10,27 @@ const grid = document.querySelector("#grid-container");
 
 const button = document.getElementById("button");
 
+const width = 100;
 //const width = 10;
 
 // create 10*10 box by click
 button.addEventListener("click", function () {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < width; i++) {
     const newBox = createNewBox();
+    newBox.addEventListener("click", function () {
+      newBox.classList.add("color");
+      console.log(i + 1);
+      //newBox.classList.remove("color");
+    });
+    // insert the element on innerHTML of newBox (i + 1);
+    newBox.innerHTML = i + 1;
     grid.append(newBox);
   }
 });
+
+/* newBox.addEventListener("click", function () {
+  newSquare.classList.add("color");
+}); */
 
 function createNewBox() {
   const box = document.createElement("div");
