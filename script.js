@@ -17,20 +17,17 @@ const width = 100;
 button.addEventListener("click", function () {
   for (let i = 0; i < width; i++) {
     const newBox = createNewBox();
+
     newBox.addEventListener("click", function () {
-      newBox.classList.add("color");
+      newBox.classList.toggle("color");
+      //newBox.classList.add/remove("color") with "toggle";
       console.log(i + 1);
-      //newBox.classList.remove("color");
     });
     // insert the element on innerHTML of newBox (i + 1);
     newBox.innerHTML = i + 1;
     grid.append(newBox);
   }
 });
-
-/* newBox.addEventListener("click", function () {
-  newSquare.classList.add("color");
-}); */
 
 function createNewBox() {
   const box = document.createElement("div");
